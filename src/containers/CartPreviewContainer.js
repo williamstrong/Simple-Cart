@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react';
 
-import {CartContext} from '../CartStore';
+import {CartContext} from '../Cart/store';
 
 import CartCount from '../components/CartCount';
 import CartPreview from '../components/CartPreview';
@@ -12,8 +12,8 @@ const CartPreviewContainer = props => {
   const [cartState, cartDispatch] = useContext(CartContext);
 
   const {count} = cartState;
-  const {itemsInCart} = cartState;
-  const items = itemsById(itemsInCart);
+  const {itemIdsInCart} = cartState;
+  const items = itemsById(itemIdsInCart);
 
   useEffect(
     () => {
