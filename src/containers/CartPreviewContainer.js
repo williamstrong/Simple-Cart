@@ -37,6 +37,7 @@ const CartPreviewContainer = props => {
           count={count}
           onClose={togglePreview}
           onRemoveItem={removeItem}
+          count={count}
           items={items}
         />
       )}

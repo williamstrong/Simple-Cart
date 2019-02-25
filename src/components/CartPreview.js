@@ -6,7 +6,7 @@ const CartPreview = props => {
       <button type="button" onClick={props.onClose}>
         X
       </button>
-      {props.items ? (
+      {props.count > 0 ? (
         props.items.map(item => (
           <React.Fragment key={item.name}>
             <p key={item.name}>{item.name}</p>
